@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/profileIv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/profile_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/profileNameTv"/>
+    
+    <TextView
+        android:id="@+id/profileNameTv"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/profileIv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/profileEmailTv"/>
+
+    <TextView
+        android:id="@+id/profileEmailTv"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/profileNameTv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/paswrodChangeEdt"/>
+
+
+    <TextView
+        android:id="@+id/pwChangeLable"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/new_pw"
+        android:visibility="gone"
+        android:gravity="center"
+        app:layout_constraintRight_toLeftOf="@id/paswrodChangeEdt"
+        app:layout_constraintTop_toBottomOf="@id/profileEmailTv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/passwordChangeConfirmEdt"/>
+
+    <EditText
+        android:id="@+id/paswrodChangeEdt"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/profileEmailTv"
+        app:layout_constraintLeft_toRightOf="@id/pwChangeLable"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/passwordChangeConfirmEdt"/>
+
+
+    <TextView
+        android:id="@+id/pwChange2Lable"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/new_pw"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintRight_toLeftOf="@id/passwordChangeConfirmEdt"
+        app:layout_constraintTop_toBottomOf="@id/paswrodChangeEdt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/changePwBtn"/>
+
+    <EditText
+        android:id="@+id/passwordChangeConfirmEdt"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/paswrodChangeEdt"
+        app:layout_constraintLeft_toRightOf="@id/pwChange2Lable"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/changePwBtn"
+        />
+
+
+    <Button
+        android:id="@+id/changePwBtn"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="50dp"
+        android:text="@string/change_pw"
+        app:layout_constraintBottom_toTopOf="@id/logoutBtn"
+        />
+
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="50dp"
+        android:text="@string/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
